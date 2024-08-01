@@ -1,0 +1,264 @@
+*{
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+}
+body{
+    font-family: "Press Start 2P", system-ui;
+    margin: 0;
+    background-color: #000;
+}
+.container{
+    padding-left:15px;
+    padding-right: 15px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000;
+    margin-top: 15px;
+}
+header i{
+    color: #32cd32;
+    margin-left: 25px;
+    transition: color 0.5s, transform 0.5s;
+    z-index: 4;
+}
+header i:hover{
+    color: #7fff00;
+    transform: rotateZ(180deg) scale(1.15);
+    
+}
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 800px;
+    align-items: center; 
+    margin: 0; 
+    padding: 0;
+    color: white;
+}
+header ul li{
+    white-space: nowrap;
+    position: relative;
+    transition: 0.5s;
+}
+header ul li:hover{
+    color: #79ee04;
+}
+header ul li a {
+    text-decoration: none; 
+    color: inherit;
+    background: none;
+    border: none; 
+    font: inherit; 
+}
+header ul li::before{
+    content: '|';
+    position: absolute;
+    left: -56px;
+}
+header ul li:hover::before {
+    color: white;
+}
+header ul li:first-child:before{
+    content: "";
+}
+@media (max-width: 870px) {
+    header ul{
+        display: none;
+    }
+}
+
+/* start lagging */
+.lagging{
+    background-color: #000000;
+    height: calc(100vh - 80px);
+    background-size: cover;
+    position: relative;
+}
+.lagging .container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+.lagging .text{
+    color: white;
+    width: 640px;
+    height: 200px;
+    text-align: left;
+    line-height: 1.6;
+    z-index: 1;
+    margin-left: 200px;
+}
+.lagging .text h1{
+    margin: 3px;
+}
+.lagging .text p{
+    font-size: 19px;
+    margin-bottom: 27px;
+    font-family: "Montserrat", sans-serif;
+}
+.lagging button {
+    background-image: url(images/buttonimage.png);
+    background-size: cover;
+    background-color: transparent;
+    font-size: 20px;
+    margin-left: 7px;
+    padding-left: 10px;
+    line-height: 2.4;
+    font-family: "Press Start 2P", system-ui;
+    border-radius: 11px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 5px #7fff00, 0 0 10px #7fff00, 0 0 15px #7fff00;
+    box-shadow: 0 0 10px #7fff00, 0 0 0px #7fff00, 0 0 15px #7fff00;
+    transition:  0.3s;
+}
+.lagging button:hover{
+    transform: scale(1.1,1.1);
+}
+
+
+
+
+.lagging .container .img1{
+    position: absolute;
+    top: 0px;
+    right: 0px; 
+    z-index: 0;   
+    opacity: 0.4;
+    height: calc(100vh - 115px);
+    margin-top: 36px;
+}
+.lagging .container .img2{
+    position: absolute;
+    top: 76px;
+    left: 103px;
+    transform: rotate(105deg);
+    height: 11em;
+    opacity: 0.5;
+}
+.lagging .container .img3{
+    position: absolute;
+    top: 354px;
+    left: 900px;
+    transform: rotate(15deg);
+    height: 1.8em;
+    opacity: 0.6;
+}
+.lagging .container .img4{
+    position: absolute;
+    top: 128px;
+    left: 799px;
+    transform: rotate(-22deg);
+    opacity: 0.5;
+    height: 0.25em;
+}
+
+.lagging .container .img21{
+    position: absolute;
+    top: 364px;
+    left: 845px;
+    transform: rotate(-66deg);
+    height: 9em;
+    opacity: 0.6;
+}
+.lagging .container .img31{
+    position: absolute;
+    top: 119px;
+    left: 743px;
+    transform: rotate(-20deg);
+    height: 1.5em;
+    opacity: 0.5;
+}
+.lagging .container .img41{
+    position: absolute;
+    top: 462px;
+    left: 58px;
+    transform: rotate(-34deg);
+    opacity: 0.6;
+    height: 0.20em;
+}
+.lagging .container .img5{
+    position: absolute;
+    top: 441px;
+    left: 603px;
+    transform: rotate(-124deg);
+    opacity: 0.5;
+    height: 2.6em;
+}
+.lagging .container .img32{
+    position: absolute;
+    top: 396px;
+    left: 111px;
+    transform: rotate(50deg);
+    height: 1.3em;
+    opacity: 0.6;
+}
+.lagging .container .img52{
+    position: absolute;
+    top: 62px;
+    left: 112px;
+    transform: rotate(45deg);
+    opacity: 0.5;
+    height: 1.6em;
+}
+/* end lagging */
+
+
+/* start about */
+.about{
+    height: 600px;
+}
+.about .content{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    margin:0 60px;
+}
+.about .content .box{
+    background: #000000;
+    position: relative;
+    top: 110px;
+    color: #fff;
+    height: 500px;
+    width: 500px;
+    padding: 15px;
+}
+.glow::before, .glow::after{
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #7fff00, #32cd32, #79ee04 ,#2E7D32 ,#4CAF50, #04ff10,#0ead16,#AEEA00);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s infinite linear;
+}
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }    
+    100% {
+        background-position: 0 0;
+    }
+}
+.glow::after{
+    filter: blur(20px);
+}
+.about .content .box p{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+}
