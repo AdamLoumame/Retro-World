@@ -8,6 +8,18 @@ body{
     margin: 0;
     background-color: #000;
 }
+.speacial-heading{
+    color: #e0e0e0;
+}
+.speacial-heading h1{
+    font-size: 75px;
+    text-align: center;
+    padding-top: 55px;
+    margin-bottom: 0px;
+}
+.speacial-heading p{
+    text-align: center;
+}
 .container{
     padding-left:15px;
     padding-right: 15px;
@@ -116,12 +128,12 @@ header ul li:first-child:before{
     border: none;
     cursor: pointer;
     color: #fff;
-    text-shadow: 0 0 5px #7fff00, 0 0 10px #7fff00, 0 0 15px #7fff00;
-    box-shadow: 0 0 10px #7fff00, 0 0 0px #7fff00, 0 0 15px #7fff00;
     transition:  0.3s;
 }
 .lagging button:hover{
     transform: scale(1.1,1.1);
+    text-shadow: 0 0 5px #7fff00, 0 0 10px #7fff00, 0 0 15px #7fff00;
+    box-shadow: 0 0 0px #7fff00, 0 0 0px #7fff00, 0 0 5px #7fff00;
 }
 
 
@@ -271,7 +283,7 @@ header ul li:first-child:before{
     }
 }
 .glow::after{
-    filter: blur(20px);
+    filter: blur(15px);
 }
 .about .content .box h2:first-of-type{
     font-size: 25px;
@@ -361,9 +373,50 @@ header ul li:first-child:before{
 /* start services */
 .services{
     background-color: #1a1a1a;
-    height: 1000px;
+    height: 700px;
     margin-top: 230px;
 }
+.services .container{
+    margin-top: 90px;
+    margin-left: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    font-family: "Montserrat", sans-serif;
+    color: #e0e0e0;
+    text-align: center;
+}
+.services .container .service{
+    width: 300px;
+    padding: 10px;
+    padding-top: 15px;
+    height: 430px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.services .container .service:hover{
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+}
+.services .container img{
+    height: 135px;
+}
+.services .container .service:nth-child(2) img{
+    height: 100px;
+    margin-top: 18px;
+}
+.services .container .service:first-child   img{
+    height: 100px;
+    margin-top: 18px;
+}
+.services .container h3{
+    font-size: 20px;
+}
+.services .container p{
+    font-size: 15px;
+    line-height: 1.6;
 
+}
 
 /* end services */
