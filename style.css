@@ -36,6 +36,7 @@ header i{
     margin-left: 25px;
     transition: color 0.5s, transform 0.5s;
     z-index: 4;
+    cursor: pointer;
 }
 header i:hover{
     color: #7fff00;
@@ -424,7 +425,7 @@ header ul li:first-child:before{
 
 /* start items */
 .items{
-    height: 3000px;
+    height: 3130px;
     background-color: #fff;
 }
 .items .speacial-heading{
@@ -534,22 +535,110 @@ header ul li:first-child:before{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 500px);
-    grid-gap: 50px 50px;
+    grid-gap: 130px 70px;
     margin: 620px 50px 0;
 }
 .items .game-container .game{
     text-align: center;
-
+}
+.items .game-container .game .textbox{
+    padding: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+.items .game-container .game:hover .textbox{
+    color: #e0e0e0;
+    background-color: #1a1a1a;
 }
 .items .game-container .game h3{
-    font-size: 15px;
+    font-size: 19px;
     line-height: 1.6;
+    text-align: left;
 }
 .items .game-container .game p{
     font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.items .game-container .game .textbox button{
+    margin-left: 250px;
+    background-color: #e0e0e0;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 29px;
+    border: 0;
+    height: 55px;
+    width: 130px;
+    cursor: pointer;
 }
 .items .game-container .game img{
     height: 300px;
     width: 300px;
 }
+.items .game-container .game .textbox .price{
+    position: absolute;
+    font-size: 35px;
+    bottom: 20px;
+    left: 15px;
+    margin: 0;
+}
+/* end items */
+
+/* start reviews */
+.reviews{
+    height: 1075px;
+}
+.reviews .container{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin: 130px 75px 0;
+
+}
+.reviews .container .review{
+    text-align: center;
+    padding: 15px;
+    color: #e0e0e0;
+}
+.reviews .container .review img{
+    width: 250px;
+    border-radius: 25px;
+    margin: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.reviews .container .review img:hover{
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+.reviews .container .review h4{
+    font-size:25px;
+}
+.reviews .container .review h5{
+    font-size: 25px;
+    text-align: left;
+    font-family: "Montserrat", sans-serif;
+    color: #A9A9A9;
+    margin-bottom: 0;
+}
+.reviews .container .review p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: left;
+}
+/* end reviews */
+
+/* start footer */
+.footer{
+    padding: 15px;
+    height: 50px;
+    width: 100%;
+    background-color: #04ff10;
+    text-align: center;
+    color: #000;
+}
+.footer p{
+    margin: 0;
+}
+/* end footer */
